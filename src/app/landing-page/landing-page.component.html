@@ -1,7 +1,0 @@
-
-<mat-grid-list cols="9" rowHeight="200px" gutterSize="3px">
-  <mat-grid-tile
-    *ngFor="let tile of images; index as i" [colspan]="tile.cols" [rowspan]="tile.rows">
-    <img [src]="'./assets/photos/' + tile.id + '.jpg'" alt="Oops">
-  </mat-grid-tile>
-</mat-grid-list>

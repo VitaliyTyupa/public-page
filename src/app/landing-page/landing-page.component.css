@@ -1,9 +1,0 @@
-img.self {
-  width: 200px;
-}
-img {
-  height: 100%;
-}
-img:hover {
-  height: 200%;
-}
