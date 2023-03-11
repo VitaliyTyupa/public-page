@@ -8,4 +8,5 @@
   max-width: 1600px;
   max-height: 900px;
   margin: auto;
+  overflow: auto;
 }
