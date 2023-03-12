@@ -2,6 +2,6 @@
 <mat-grid-list cols="9" rowHeight="200px" gutterSize="3px">
   <mat-grid-tile
     *ngFor="let tile of images; index as i" [colspan]="tile.cols" [rowspan]="tile.rows">
-    <img [ngSrc]="'./assets/photos/' + tile.id + '.jpg'" alt="Oops" fill [routerLink]="'' + tile.id">
+    <img [ngSrc]="'http://localhost:4201/assets/photos/' + tile.id + '.jpg'" alt="Oops" fill [routerLink]="'' + tile.id">
   </mat-grid-tile>
 </mat-grid-list>

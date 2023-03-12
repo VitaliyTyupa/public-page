@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {GalleryComponent} from "./gallery/gallery.component";
+import {GalleryComponent} from "../../projects/gallery/src/app/gallery/gallery.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
