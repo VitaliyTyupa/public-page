@@ -1,9 +1,10 @@
 import {Routes} from "@angular/router";
-import {GalleryComponent} from "./gallery/gallery.component";
 import {LogInComponent} from "./log-in/log-in.component";
 import {RegistrationComponent} from "./registration/registration.component";
-import {AppComponent} from "./app.component";
 import {MainComponent} from "./main/main.component";
+import { loadRemoteModule } from '@angular-architects/module-federation';
+
+const URL = 'http://localhost:4201/remoteEntry.js';
 
 export const AppRoutes: Routes = [
   {
@@ -16,7 +17,12 @@ export const AppRoutes: Routes = [
   },
   {
     path: 'gallery',
-    loadChildren: () => import('./gallery/gallery.routes')
+    loadChildren: () => loadRemoteModule({
+      type: 'module',
+      remoteEntry: URL,
+      exposedModule: './GalleryModule'
+    })
+      .then(m => m.GalleryModule)
   },
   {
     path: 'login',

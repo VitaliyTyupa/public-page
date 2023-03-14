@@ -4,9 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4200",
+    "start:app1": "ng serve public-page",
+    "start:app2": "ng serve gallery",
+    "start:all": "yarn run start:app1 & yarn run start:app2",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
   "private": true,
   "dependencies": {
@@ -36,6 +40,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "ngx-build-plus": "^15.0.0",
     "typescript": "~4.9.4"
   }
 }
