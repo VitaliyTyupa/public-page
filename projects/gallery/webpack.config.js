@@ -11,7 +11,7 @@ sharedMappings.register(
 module.exports = {
   output: {
     uniqueName: "gallery",
-    publicPath: "auto"
+    publicPath: "http://localhost:4201/"
   },
   optimization: {
     runtimeChunk: false
@@ -28,18 +28,11 @@ module.exports = {
     new ModuleFederationPlugin({
         library: { type: "module" },
 
-        // For remotes (please adjust)
         name: "gallery",
         filename: "remoteEntry.js",
         exposes: {
             './GalleryModule': './projects/gallery/src/app/gallery/gallery.module.ts',
         },
-
-        // For hosts (please adjust)
-        // remotes: {
-        //     "publicPage": "http://localhost:4200/remoteEntry.js",
-
-        // },
 
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
